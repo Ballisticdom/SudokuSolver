@@ -9,19 +9,6 @@ puzzle = [[0,0,7,0,3,0,2,0,5],
           [6,8,0,0,0,0,0,0,0]          
          ]
 
-
-'''
-puzzle = [[9,0,7,0,0,0,0,0,0],
-          [0,1,2,8,0,5,0,0,0],
-          [0,0,3,0,0,0,0,8,1],
-          [5,3,4,7,6,0,0,0,0],
-          [8,0,9,0,5,0,0,4,0],
-          [0,7,0,0,0,4,0,0,0],
-          [0,9,0,5,0,0,0,0,0],
-          [7,6,0,4,0,1,0,3,0],
-          [0,0,1,3,7,0,0,0,9],
-         ]
-'''         
 row = [[],[],[],[],[],[],[],[],[]]
 col = [[],[],[],[],[],[],[],[],[]]
 sqr = [[],[],[],[],[],[],[],[],[]]
@@ -34,13 +21,10 @@ for i in puzzle:
   print(i)
 
 class Sudoku:
-
   def listToStringWithoutBrackets(list1):
     return str(list1).replace('[','').replace(']','')
 
   def update():
-    
-            
     #Creates a list for all the rows
     for m in range(9):
       row[m].append(puzzle[m])
@@ -214,7 +198,6 @@ class Sudoku:
                 puzzle[i][j] = int(result1)
                 Sudoku.update()
                 Sudoku.solve(puzzle)
-
         else:
           break
 
@@ -224,4 +207,3 @@ Sudoku.solve(puzzle)
 
 for i in puzzle:
   print(i)
-   
